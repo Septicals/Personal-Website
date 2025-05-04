@@ -1,0 +1,187 @@
+* {
+    box-sizing: border-box;
+  }
+  
+  html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 80px; /* or however tall your fixed header/sidebar is */
+  }
+  
+
+  @font-face {
+    font-family: 'cookiemonster';
+    src: url('Cookiemonster-gv11.ttf') format(truetype);
+  }
+  
+  body {
+    margin: 0;
+    font-family: 'cookiemonster', sans-serif;
+    background: url(v1013-p-0009a.jpg);
+    background-size: auto;
+  }
+  
+  /* Toggle button */
+  .toggle-btn {
+    position: fixed;
+    top: 10px;
+    left: 10px;
+    z-index: 1001;
+    background-color: #333;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    font-size: 18px;
+    font-family: 'cookiemonster', sans-serif;
+  }
+  
+  /* Container layout */
+  .container {
+    display: flex;
+    transition: margin-left 0.3s ease;
+  }
+  
+  /* Sidebar styles */
+  .sidebar {
+    width: 220px;
+    background-color: #222;
+    color: white;
+    padding: 20px;
+    transition: transform 0.3s ease;
+    height: 100vh;
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 1000;
+  }
+  
+  .sidebar.collapsed {
+    transform: translateX(-100%);
+  }
+  
+  .sidebar ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .sidebar ul li {
+    margin: 15px 0;
+  }
+  
+  .sidebar ul li a {
+    color: white;
+    text-decoration: none;
+  }
+  
+  .sidebar ul li a:hover {
+    text-decoration: underline;
+  }
+  
+  /* Main content */
+  .main-content {
+    margin-left: 0;
+    padding: 40px;
+    flex: 1;
+    background-color: #f4f4f4;
+    min-height: 100vh;
+    width: 100%;
+    background: url(v1013-p-0009a.jpg);
+    background-size: auto;
+    align-items: center;
+  }
+  
+  section {
+    padding: 80px 20px;
+    margin-top: 40px;
+    border-bottom: 1px solid #ccc;
+  }
+
+  /* Playlist container */
+  .playlist-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    margin-top: 20px;
+  }
+  
+  .playlist {
+    flex: 1;
+    max-width: 48%; /* Makes sure the playlists don't take more than 50% of the width */
+  }
+  
+  .playlist iframe {
+    width: 100%;
+    border-radius: 12px;
+  }
+  
+  /* Video responsive container */
+  .video-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* centers both video and text */
+    max-width: 640px;
+    margin: 0 auto;
+  }
+  
+  .video-container {
+    position: relative;
+    width: 100%;
+    padding-bottom: 56.25%; /* 16:9 aspect ratio */
+    height: 0;
+    overflow: hidden;
+  }
+  
+  .video-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 12px;
+    display: block;
+  }
+  
+  .video-caption {
+    margin-top: 10px;
+    font-size: 16px;
+    color: #333;
+    text-align: center;
+    font-size: large;
+  }
+
+   /* About Me section */
+   .about-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 100%;
+  }
+  
+  .about-text {
+    flex: 1;
+  }
+  
+  .about-image img {
+    width: 100%;
+    max-width: 300px; /* Adjust image size */
+    border-radius: 8px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+  }
+  
+
+  
+  /* Sidebar behavior on larger screens */
+  @media (min-width: 768px) {
+    .sidebar.collapsed + .main-content {
+      margin-left: 0;
+    }
+  
+    .sidebar:not(.collapsed) + .main-content {
+      margin-left: 220px;
+    }
+  }
+  
+  

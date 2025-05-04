@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>My Website!</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- Toggle button -->
+  <button class="toggle-btn" onclick="toggleSidebar()">☰ Menu</button>
+
+  <div class="container">
+    <!-- Sidebar -->
+    <aside id="sidebar" class="sidebar collapsed">
+      <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#playlist">Playlist</a></li>
+        <li><a href="#videos">Videos</a></li>
+        <li><a href="#about">About</a></li>
+      </ul>
+    </aside>
+
+    <!-- Main content -->
+    <main class="main-content">
+      <section id="home">
+        <h1>Hi hi</h1>
+        <p>This probably looks really bad on mobile...</p>
+      </section>
+
+      <section id="playlist">
+        <h2>🎵 My Spotify Playlists</h2>
+        <div class="playlist-container">
+          <!-- First Playlist -->
+          <div class="playlist">
+            <iframe style="border-radius:12px" src="https://open.spotify.com/embed/playlist/5vygQTa0oIv4AdR8cdN3GC?utm_source=generator" width="50%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+          </div>
+      
+          <!-- Second Playlist -->
+          <div class="playlist">
+            <iframe style="border-radius:12px" src="https://open.spotify.com/embed/playlist/1DJoM9wXy8iuxmvlJhBclu?utm_source=generator" width="50%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+          </div>
+        </div>
+      </section>
+
+      <section id="videos">
+        <h2>📺 Favorite YouTube Video</h2>
+        <div class="video-container">
+          <iframe src="https://www.youtube.com/embed/I0jHbsidh1g?si=W4lW0T4tpUwsSnnx" 
+            title="YouTube video player"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen>
+          </iframe>
+        </div>
+        <p class="video-caption">Video I like right now!</p>
+      </section>
+
+      <section id="about">
+        <h2>About Me</h2>
+        <div class="about-content">
+          <div class="about-text">
+            <p>Hello to anyone that randomly comes across this site! My name is Cesar Gonzales and I am a computer science student in UF!</p>
+          </div>
+          <div class="about-image">
+            <img src="Literally me.png" alt="Me!" />
+          </div>
+        </div>
+      </section>
+      
+
+      
+    
+
+  <script src="script.js"></script>
+</body>
+</html>
+
+
